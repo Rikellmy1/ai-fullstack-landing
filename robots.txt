@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gustavo-ai-fullstack.netlify.app/sitemap.xml

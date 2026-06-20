@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Desenvolvedor full-stack com IA para criar sites, SaaS, automações e sistemas com banco de dados escaláveis."
+    />
+    <meta name="theme-color" content="#0a0a0b" />
+    <title>Full-Stack com IA | Sites, SaaS e Automações</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="canonical" href="https://gustavo-ai-fullstack.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full-Stack com IA | Sites, SaaS e Automações" />
+    <meta property="og:description" content="Desenvolvedor full-stack com IA para criar sites, SaaS, automações e sistemas com banco de dados escaláveis." />
+    <meta property="og:url" content="https://gustavo-ai-fullstack.netlify.app/" />
+    <meta property="og:image" content="https://gustavo-ai-fullstack.netlify.app/assets/apple-touch-icon.png" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Full-Stack com IA | Sites, SaaS e Automações" />
+    <meta name="twitter:description" content="Desenvolvedor full-stack com IA para criar sites, SaaS, automações e sistemas com banco de dados escaláveis." />
+    <meta name="twitter:image" content="https://gustavo-ai-fullstack.netlify.app/assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="aurora" aria-hidden="true">
+      <span class="aurora-blob aurora-blob-1"></span>
+      <span class="aurora-blob aurora-blob-2"></span>
+    </div>
+    <canvas class="cosmos-canvas" id="cosmos-canvas" aria-hidden="true"></canvas>
+    <div class="page-noise" aria-hidden="true"></div>
+    <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+
+    <div class="cursor-dot" data-cursor-dot aria-hidden="true"></div>
+    <div class="cursor-ring" data-cursor-ring aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Ir para o início" data-magnetic>
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/favicon.svg" alt="" width="38" height="38" />
+        </span>
+        <span class="brand-name">AI FullStack</span>
+      </a>
+
+      <nav class="nav-links" id="main-navigation" aria-label="Navegação principal">
+        <a href="#construcao">Construção</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#ia">IA</a>
+        <a href="#processo">Processo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="nav-mail" href="mailto:gustavorikellmy45@gmail.com?subject=Quero%20criar%20um%20projeto%20com%20IA" data-magnetic>
+        Enviar email
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="main-navigation"
+        aria-expanded="false"
+        data-menu-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-kicker" data-animate>
+            <span>Desenvolvimento full-stack</span>
+            <span>IA aplicada</span>
+          </div>
+
+          <div class="hero-title-wrap">
+            <span class="hero-line" aria-hidden="true"></span>
+            <h1 id="hero-title" class="mega-title" data-split>
+              <span class="t-line">Sites, SaaS</span>
+              <span class="t-line">e <em>automações</em></span>
+              <span class="t-line">movidos a <em>dados</em>.</span>
+            </h1>
+          </div>
+
+          <div class="hero-copy-block" data-animate>
+            <p>
+              Eu crio experiências digitais completas com IA, front-end, back-end,
+              automações e banco de dados para transformar ideias em sistemas
+              escaláveis.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" data-magnetic href="mailto:gustavorikellmy45@gmail.com?subject=Quero%20criar%20um%20projeto%20com%20IA">
+                Enviar email
+              </a>
+              <a class="button button-ghost" data-magnetic href="#projetos">Ver meus projetos</a>
+            </div>
+          </div>
+
+          <aside class="hero-side" data-animate aria-hidden="true">
+            <p class="hero-side-role">Gustavo Rikellmy</p>
+            <p class="hero-side-label">Full-stack engineer · IA aplicada</p>
+            <ul class="hero-index">
+              <li><span>01</span> Sites</li>
+              <li><span>02</span> SaaS</li>
+              <li><span>03</span> Automações</li>
+              <li><span>04</span> Dados</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="hero-scroll-cue" aria-hidden="true">
+          <span>Role para explorar</span>
+          <span class="hero-scroll-track"><span class="hero-scroll-dot"></span></span>
+        </div>
+      </section>
+
+      <section class="spline-section" id="experiencia-3d" aria-label="Experiência interativa">
+        <div class="spline-section-shell" data-animate>
+          <div class="signal-head">
+            <p class="eyebrow">Interface viva</p>
+            <h2>Sistemas que respondem ao movimento.</h2>
+            <p class="signal-support">
+              Cada conexão é um dado em trânsito. Mova o cursor pela malha: a
+              mesma lógica de reagir ao contexto que aplico em produtos reais.
+            </p>
+          </div>
+          <div class="signal-stage" data-parallax data-speed="-0.12">
+            <canvas id="signal-field" aria-hidden="true"></canvas>
+            <span class="signal-tag signal-tag-1">front-end</span>
+            <span class="signal-tag signal-tag-2">back-end</span>
+            <span class="signal-tag signal-tag-3">IA</span>
+            <span class="signal-tag signal-tag-4">dados</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee-section" aria-label="Especialidades">
+        <div class="marquee" data-marquee>
+          <div class="marquee-group">
+            <span>Landing pages premium</span>
+            <span>SaaS escalável</span>
+            <span>Automação com IA</span>
+            <span>PostgreSQL e Supabase</span>
+            <span>Dashboards internos</span>
+            <span>APIs inteligentes</span>
+            <span>Produtos digitais</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-section" id="construcao">
+        <div class="section-shell">
+          <div class="section-intro" data-animate>
+            <p class="eyebrow">O que eu construo</p>
+            <h2>Interfaces que parecem simples, mas operam como produto real.</h2>
+            <p class="section-support">
+              Não é só colocar uma página bonita no ar. A entrega combina
+              estratégia, experiência visual, código, banco de dados e automações
+              para criar algo que uma pessoa consegue usar sem travar no caminho.
+            </p>
+          </div>
+
+          <div class="build-manifest" data-animate>
+            <p>
+              Cada projeto nasce com uma pergunta direta: qual fluxo precisa ficar
+              mais rápido, mais claro ou mais inteligente?
+            </p>
+            <div>
+              <span>Validar ideia</span>
+              <span>Captar leads</span>
+              <span>Vender online</span>
+              <span>Automatizar operação</span>
+            </div>
+          </div>
+
+          <div class="delivery-grid">
+            <article data-animate>
+              <span class="card-index">01</span>
+              <h3>Clareza antes do código</h3>
+              <p>
+                Eu organizo a oferta, o fluxo principal, as telas essenciais e a
+                ação que o usuário precisa tomar. Assim o projeto já nasce com
+                direção, não apenas com uma interface bonita.
+              </p>
+            </article>
+
+            <article data-animate>
+              <span class="card-index">02</span>
+              <h3>IA onde faz sentido</h3>
+              <p>
+                A IA entra para acelerar tarefas, gerar respostas, classificar
+                dados, resumir informações ou automatizar partes da operação,
+                sempre conectada ao objetivo do produto.
+              </p>
+            </article>
+
+            <article data-animate>
+              <span class="card-index">03</span>
+              <h3>Base pronta para evoluir</h3>
+              <p>
+                O sistema fica preparado para novas páginas, novos clientes, novas
+                regras e novos dados. A primeira versão precisa funcionar agora,
+                mas também precisa aguentar o próximo passo.
+              </p>
+            </article>
+
+            <article data-animate>
+              <span class="card-index">04</span>
+              <h3>Entrega com contexto</h3>
+              <p>
+                Além do visual, você recebe uma solução explicável: o que foi
+                criado, onde cada parte se conecta e quais próximas melhorias fazem
+                sentido para transformar a ideia em produto contínuo.
+              </p>
+            </article>
+          </div>
+
+          <div class="editorial-list">
+            <article class="editorial-item">
+              <span class="card-index">01</span>
+              <h3>Sites que convertem</h3>
+              <div class="editorial-copy">
+                <p>
+                  Landing pages rápidas, responsivas e marcantes para apresentar
+                  ofertas com clareza, movimento e presença.
+                </p>
+                <ul>
+                  <li>Hero forte, copy objetiva e chamada para ação visível.</li>
+                  <li>Seções pensadas para explicar valor, quebrar objeções e gerar contato.</li>
+                  <li>Visual responsivo com animações leves e carregamento simples.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="editorial-item">
+              <span class="card-index">02</span>
+              <h3>SaaS com estrutura</h3>
+              <div class="editorial-copy">
+                <p>
+                  Autenticação, dashboards, assinaturas, fluxos internos e bases de
+                  dados pensadas para crescer.
+                </p>
+                <ul>
+                  <li>Login, áreas privadas, permissões e jornadas de usuário.</li>
+                  <li>Painel administrativo para acompanhar clientes, pedidos ou métricas.</li>
+                  <li>Arquitetura preparada para novos módulos depois do lançamento.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="editorial-item">
+              <span class="card-index">03</span>
+              <h3>Automações inteligentes</h3>
+              <div class="editorial-copy">
+                <p>
+                  Agentes e integrações que reduzem tarefas manuais e conectam
+                  ferramentas, dados e decisões.
+                </p>
+                <ul>
+                  <li>Fluxos com IA para responder, organizar, classificar ou gerar conteúdo.</li>
+                  <li>Integração com formulários, planilhas, CRMs, APIs e bancos de dados.</li>
+                  <li>Rotinas para economizar tempo em operações repetitivas.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="editorial-item">
+              <span class="card-index">04</span>
+              <h3>Sistemas com banco</h3>
+              <div class="editorial-copy">
+                <p>
+                  Modelagem, APIs e painéis conectados a PostgreSQL, Supabase ou à
+                  stack que fizer sentido para o projeto.
+                </p>
+                <ul>
+                  <li>Dados organizados para cadastro, histórico, busca e relatórios.</li>
+                  <li>Endpoints e regras de negócio para manter o sistema consistente.</li>
+                  <li>Base técnica para escalar sem reescrever tudo do zero.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects-section" id="projetos">
+        <div class="section-shell">
+          <div class="projects-heading" data-animate>
+            <div>
+              <p class="eyebrow">Projetos selecionados</p>
+              <h2>Soluções digitais construídas para funcionar de verdade.</h2>
+            </div>
+            <p>
+              Uma seleção de formatos que conectam interface, lógica, dados e IA.
+              Cada projeto pode ser adaptado ao seu mercado, operação e objetivo.
+            </p>
+          </div>
+        </div>
+
+        <div class="projects-viewport">
+          <div class="projects-list" data-projects-track>
+            <article class="project-item" data-animate>
+              <div class="project-index">
+                <span>01</span>
+                <small>Produto SaaS</small>
+              </div>
+              <div class="project-content">
+                <p class="project-label">Plataforma completa</p>
+                <h3>SaaS com dashboard, usuários e dados em tempo real.</h3>
+                <p>
+                  Estrutura para autenticação, áreas privadas, planos, painel
+                  administrativo e banco de dados preparado para crescer.
+                </p>
+                <div class="project-tags" aria-label="Tecnologias do projeto">
+                  <span>Next.js</span>
+                  <span>Supabase</span>
+                  <span>PostgreSQL</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="project-link project-link-live"
+                  href="https://flowlance-rikellmy.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-magnetic
+                  aria-label="Abrir o projeto Flowlance em uma nova aba"
+                >
+                  Abrir Flowlance <span aria-hidden="true">↗</span>
+                </a>
+                <a
+                  class="project-link"
+                  href="mailto:gustavorikellmy45@gmail.com?subject=Quero%20um%20projeto%20SaaS"
+                  aria-label="Conversar sobre um projeto SaaS"
+                >
+                  Quero algo assim <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-item" data-animate>
+              <div class="project-index">
+                <span>02</span>
+                <small>Automação com IA</small>
+              </div>
+              <div class="project-content">
+                <p class="project-label">Operação inteligente</p>
+                <h3>Automações que conectam atendimento, dados e decisões.</h3>
+                <p>
+                  Fluxos para receber informações, classificar demandas, gerar
+                  respostas e atualizar ferramentas sem trabalho repetitivo.
+                </p>
+                <div class="project-tags" aria-label="Tecnologias do projeto">
+                  <span>OpenAI</span>
+                  <span>n8n</span>
+                  <span>APIs</span>
+                </div>
+              </div>
+              <a
+                class="project-link"
+                href="mailto:gustavorikellmy45@gmail.com?subject=Quero%20uma%20automacao%20com%20IA"
+                aria-label="Conversar sobre uma automação com IA"
+              >
+                Quero algo assim <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="project-item" data-animate>
+              <div class="project-index">
+                <span>03</span>
+                <small>Experiência web</small>
+              </div>
+              <div class="project-content">
+                <p class="project-label">Site de alta conversão</p>
+                <h3>Landing page marcante, rápida e focada em gerar contato.</h3>
+                <p>
+                  Narrativa visual, animações fluidas, responsividade e chamadas
+                  claras para transformar visitas em oportunidades reais.
+                </p>
+                <div class="project-tags" aria-label="Tecnologias do projeto">
+                  <span>GSAP</span>
+                  <span>Lenis</span>
+                  <span>Performance</span>
+                </div>
+              </div>
+              <a
+                class="project-link"
+                href="mailto:gustavorikellmy45@gmail.com?subject=Quero%20uma%20landing%20page"
+                aria-label="Conversar sobre uma landing page"
+              >
+                Quero algo assim <span aria-hidden="true">→</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="impact-section" id="ia">
+        <div class="section-shell impact-layout">
+          <div class="impact-title" data-animate>
+            <p class="eyebrow">Por que usar IA?</p>
+            <h2>Velocidade sem virar gambiarra.</h2>
+          </div>
+
+          <div class="impact-copy" data-animate>
+            <p>
+              IA acelera pesquisa, prototipagem, copy, automação e partes do
+              código. A engenharia garante arquitetura, segurança, performance e
+              manutenção.
+            </p>
+            <p>
+              O resultado é uma entrega mais rápida, mas ainda pensada para uso
+              real: com dados persistentes, fluxos claros e espaço para evoluir.
+            </p>
+          </div>
+
+          <div class="impact-metrics" data-animate>
+            <div>
+              <strong><span data-counter data-target="10" data-suffix="x">0x</span></strong>
+              <span>mais velocidade na validação</span>
+            </div>
+            <div>
+              <strong><span>24/7</span></strong>
+              <span>rotinas automatizadas</span>
+            </div>
+            <div>
+              <strong><span data-counter data-target="100" data-suffix="%">0%</span></strong>
+              <span>foco em produto utilizável</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="process-section" id="processo">
+        <div class="section-shell">
+          <div class="section-intro narrow" data-animate>
+            <p class="eyebrow">Processo</p>
+            <h2>Do briefing ao sistema funcionando.</h2>
+          </div>
+
+          <div class="timeline">
+            <article data-animate>
+              <span class="card-index">Diagnóstico</span>
+              <h3>Transformar ideia em fluxo</h3>
+              <p>Objetivo, público, conversão, dados e integrações entram no mapa.</p>
+            </article>
+
+            <article data-animate>
+              <span class="card-index">Protótipo</span>
+              <h3>Visual e experiência navegável</h3>
+              <p>A interface ganha forma, ritmo e hierarquia antes da camada pesada.</p>
+            </article>
+
+            <article data-animate>
+              <span class="card-index">Build</span>
+              <h3>Código, banco e automação</h3>
+              <p>Front-end, back-end, IA, APIs e banco de dados trabalham juntos.</p>
+            </article>
+
+            <article data-animate>
+              <span class="card-index">Evolução</span>
+              <h3>Medir, ajustar e escalar</h3>
+              <p>O produto fica pronto para novas telas, módulos e melhoria contínua.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stack-section" id="stack">
+        <div class="section-shell stack-layout">
+          <div data-animate>
+            <p class="eyebrow">Stack</p>
+            <h2>Ferramentas modernas para criar rápido e manter sólido.</h2>
+          </div>
+
+          <div class="stack-grid" data-animate>
+            <span class="stack-badge stack-react">React</span>
+            <span class="stack-badge stack-next">Next.js</span>
+            <span class="stack-badge stack-node">Node.js</span>
+            <span class="stack-badge stack-typescript">TypeScript</span>
+            <span class="stack-badge stack-postgres">PostgreSQL</span>
+            <span class="stack-badge stack-supabase">Supabase</span>
+            <span class="stack-badge stack-stripe">Stripe</span>
+            <span class="stack-badge stack-openai">OpenAI</span>
+            <span class="stack-badge stack-n8n">n8n</span>
+            <span class="stack-badge stack-vercel">Vercel</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contato">
+        <div class="section-shell contact-layout">
+          <div class="contact-lead" data-animate>
+            <p class="eyebrow">Contato direto</p>
+            <h2>Me envie a ideia. Eu te devolvo um caminho técnico claro.</h2>
+            <p>
+              Use o formulário ou abra seu app de email. O destino será sempre
+              <strong>gustavorikellmy45@gmail.com</strong>.
+            </p>
+            <a class="button button-primary" data-magnetic href="mailto:gustavorikellmy45@gmail.com?subject=Quero%20criar%20um%20projeto%20com%20IA">
+              Enviar email
+            </a>
+          </div>
+
+          <form
+            class="contact-form"
+            name="contato"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="empresa"
+            data-mail-form
+            data-animate
+          >
+            <input type="hidden" name="form-name" value="contato" />
+            <p class="netlify-honeypot" aria-hidden="true">
+              <label>Não preencha este campo: <input name="empresa" /></label>
+            </p>
+
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input id="nome" name="name" type="text" autocomplete="name" placeholder="Seu nome" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="seu@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="projeto">Projeto</label>
+              <select id="projeto" name="projeto" required>
+                <option value="" disabled selected>Escolha uma opção</option>
+                <option value="landing">Landing page</option>
+                <option value="saas">SaaS</option>
+                <option value="automacao">Automação com IA</option>
+                <option value="sistema">Sistema com banco de dados</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="message" rows="5" placeholder="Me conte objetivo, prazo e referências." required></textarea>
+            </div>
+
+            <button class="button button-primary" type="submit" data-submit-button data-magnetic>
+              Enviar briefing
+            </button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="footer-year">2026</span> AI FullStack. Sites, SaaS, automações e sistemas com dados.</p>
+      <a href="#top" data-magnetic>Voltar ao topo</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+    <script type="module" src="/script.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Gustavo Rikellmy",
+      "url": "https://gustavo-ai-fullstack.netlify.app/",
+      "email": "gustavorikellmy45@gmail.com",
+      "jobTitle": "Desenvolvedor Full-Stack com IA",
+      "description": "Criação de sites, SaaS, automações com IA e sistemas com banco de dados.",
+      "knowsAbout": ["React", "Next.js", "Node.js", "TypeScript", "Supabase", "PostgreSQL", "OpenAI", "n8n"],
+      "offers": {
+        "@type": "Offer",
+        "description": "Desenvolvimento de sites, SaaS, automações com IA e sistemas com banco de dados"
+      }
+    }
+    </script>
+  </body>
+</html>

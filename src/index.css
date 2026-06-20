@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos da antiga cena Spline removidos — a peça visual agora é o
+   #signal-field (canvas) estilizado em styles.css. */
