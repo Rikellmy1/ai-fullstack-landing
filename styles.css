@@ -532,6 +532,20 @@ h3 {
   background: var(--ember-soft);
 }
 
+.button-whatsapp {
+  gap: 0.5rem;
+}
+
+.button-whatsapp svg {
+  flex: 0 0 auto;
+  color: var(--ember);
+}
+
+/* Garante que [hidden] esconda mesmo elementos com display custom (.button é inline-flex) */
+[data-contact-reveal][hidden] {
+  display: none !important;
+}
+
 [data-magnetic] {
   will-change: transform;
 }

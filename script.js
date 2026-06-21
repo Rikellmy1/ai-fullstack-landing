@@ -474,15 +474,12 @@ function initContactPhone() {
   // └──────────────────────────────────────────────────────────────────┘
   const CONTACT_PHONE = "5511986036017";
 
-  const container = document.querySelector("[data-contact-methods]");
-  if (!container) return;
-
   const digits = CONTACT_PHONE.replace(/\D/g, "");
   const isValid = /^\d{12,13}$/.test(digits); // 55 + DDD + 8 ou 9 dígitos
 
   if (!isValid) {
     console.warn(
-      "[contato] Defina CONTACT_PHONE em script.js (ex.: \"5511999998888\") para ativar WhatsApp e Ligação."
+      "[contato] Defina CONTACT_PHONE em script.js (ex.: \"5511999998888\") para ativar os botões de WhatsApp."
     );
     return; // mantém os botões escondidos até o número ser preenchido
   }
@@ -490,13 +487,19 @@ function initContactPhone() {
   const message = encodeURIComponent(
     "Oi! Vim pelo seu site e quero criar um projeto com IA."
   );
-  const whatsapp = container.querySelector("[data-whatsapp]");
-  const call = container.querySelector("[data-call]");
 
-  if (whatsapp) whatsapp.href = `https://wa.me/${digits}?text=${message}`;
-  if (call) call.href = `tel:+${digits}`;
+  // Liga TODOS os botões de WhatsApp/Ligação do site a partir do mesmo número
+  document
+    .querySelectorAll("[data-whatsapp]")
+    .forEach((el) => (el.href = `https://wa.me/${digits}?text=${message}`));
+  document
+    .querySelectorAll("[data-call]")
+    .forEach((el) => (el.href = `tel:+${digits}`));
 
-  container.hidden = false;
+  // Revela tudo que estava escondido até o número ser válido
+  document
+    .querySelectorAll("[data-contact-reveal]")
+    .forEach((el) => (el.hidden = false));
 }
 
 // Reveal disparado por IntersectionObserver (confiável com Lenis) que toca uma
