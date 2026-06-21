@@ -466,6 +466,39 @@ function initContactForm() {
   });
 }
 
+function initContactPhone() {
+  // ┌──────────────────────────────────────────────────────────────────┐
+  // │  TROQUE pelo seu número no formato internacional (somente dígitos):│
+  // │  55 (Brasil) + DDD (2 dígitos) + número.  Ex.: "5511999998888"     │
+  // │  Enquanto estiver "55XXXXXXXXXXX", os botões ficam escondidos.      │
+  // └──────────────────────────────────────────────────────────────────┘
+  const CONTACT_PHONE = "5511986036017";
+
+  const container = document.querySelector("[data-contact-methods]");
+  if (!container) return;
+
+  const digits = CONTACT_PHONE.replace(/\D/g, "");
+  const isValid = /^\d{12,13}$/.test(digits); // 55 + DDD + 8 ou 9 dígitos
+
+  if (!isValid) {
+    console.warn(
+      "[contato] Defina CONTACT_PHONE em script.js (ex.: \"5511999998888\") para ativar WhatsApp e Ligação."
+    );
+    return; // mantém os botões escondidos até o número ser preenchido
+  }
+
+  const message = encodeURIComponent(
+    "Oi! Vim pelo seu site e quero criar um projeto com IA."
+  );
+  const whatsapp = container.querySelector("[data-whatsapp]");
+  const call = container.querySelector("[data-call]");
+
+  if (whatsapp) whatsapp.href = `https://wa.me/${digits}?text=${message}`;
+  if (call) call.href = `tel:+${digits}`;
+
+  container.hidden = false;
+}
+
 // Reveal disparado por IntersectionObserver (confiável com Lenis) que toca uma
 // animação GSAP ao entrar em tela. Substitui os triggers `toggleActions:"play"`
 // do ScrollTrigger, que neste setup (Lenis + pin) não disparavam o onEnter e
@@ -920,6 +953,7 @@ initMagnetic();
 initMobileMenu();
 initAnchors();
 initContactForm();
+initContactPhone();
 
 const yearEl = document.getElementById("footer-year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());

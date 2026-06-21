@@ -1381,6 +1381,48 @@ h3 {
   overflow-wrap: anywhere;
 }
 
+.contact-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.contact-methods[hidden] {
+  display: none;
+}
+
+.contact-method {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 50px;
+  padding: 0 1.2rem;
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.9rem;
+  will-change: transform;
+}
+
+.contact-method svg {
+  flex: 0 0 auto;
+  color: var(--ember);
+  transition: color 240ms ease;
+}
+
+.contact-method:hover {
+  color: #120705;
+  background: var(--ember);
+  border-color: var(--ember);
+}
+
+.contact-method:hover svg {
+  color: #120705;
+}
+
 .contact-form {
   display: grid;
   gap: 1rem;
